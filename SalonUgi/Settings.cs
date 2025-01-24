@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SalonUgi
 {
-    public partial class Home : Form
+    public partial class Settings : Form
     {
-        public Home()
+        public Settings()
         {
             InitializeComponent();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void PlayBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
