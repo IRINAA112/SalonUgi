@@ -26,5 +26,13 @@ namespace SalonUgi
         {
 
         }
+
+        private void SettingsBtn_Click(object sender, EventArgs e)
+        {
+            Settings form= new Settings();
+            form.FormClosed += (a, b) => { this.Show(); };
+            form.Show();
+            this.Hide();    
+        }
     }
 }

@@ -32,8 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.title = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PlayBtn = new System.Windows.Forms.Button();
             this.SettingsBtn = new System.Windows.Forms.Button();
+            this.PlayBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,20 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // SettingsBtn
+            // 
+            this.SettingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SettingsBtn.BackColor = System.Drawing.Color.Pink;
+            this.SettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.BackgroundImage")));
+            this.SettingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SettingsBtn.Location = new System.Drawing.Point(12, 336);
+            this.SettingsBtn.Name = "SettingsBtn";
+            this.SettingsBtn.Size = new System.Drawing.Size(61, 49);
+            this.SettingsBtn.TabIndex = 1;
+            this.SettingsBtn.UseVisualStyleBackColor = false;
+            this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
+            // 
             // PlayBtn
             // 
             this.PlayBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -88,19 +102,6 @@
             this.PlayBtn.Text = "PLAY";
             this.PlayBtn.UseVisualStyleBackColor = false;
             this.PlayBtn.Click += new System.EventHandler(this.PlayBtn_Click);
-            // 
-            // SettingsBtn
-            // 
-            this.SettingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SettingsBtn.BackColor = System.Drawing.Color.Pink;
-            this.SettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.BackgroundImage")));
-            this.SettingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SettingsBtn.Location = new System.Drawing.Point(12, 336);
-            this.SettingsBtn.Name = "SettingsBtn";
-            this.SettingsBtn.Size = new System.Drawing.Size(61, 49);
-            this.SettingsBtn.TabIndex = 1;
-            this.SettingsBtn.UseVisualStyleBackColor = false;
             // 
             // Home
             // 
