@@ -1,6 +1,6 @@
 ﻿namespace SalonUgi
 {
-    partial class Form1
+    partial class Choice
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Choice));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,14 +44,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.GoBackPnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -65,17 +63,19 @@
             this.pictureBox1.Size = new System.Drawing.Size(61, 274);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.PaleVioletRed;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(417, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(468, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(61, 276);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
             // 
             // pictureBox3
             // 
@@ -88,6 +88,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
             // 
             // pictureBox4
             // 
@@ -95,29 +96,44 @@
             this.pictureBox4.BackColor = System.Drawing.Color.PaleVioletRed;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(54, 21);
+            this.pictureBox4.Location = new System.Drawing.Point(664, 48);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(61, 276);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 189);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(808, 329);
             this.panel1.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Pink;
+            this.label6.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.label6.Location = new System.Drawing.Point(385, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(239, 40);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Grave Grippers";
+            this.label6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
             // 
             // label7
             // 
@@ -126,23 +142,13 @@
             this.label7.BackColor = System.Drawing.Color.Pink;
             this.label7.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.label7.Location = new System.Drawing.Point(-6, 117);
+            this.label7.Location = new System.Drawing.Point(604, 129);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(174, 40);
             this.label7.TabIndex = 9;
             this.label7.Text = "Nutty Tip";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Pink;
-            this.label6.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.label6.Location = new System.Drawing.Point(337, 39);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(239, 40);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Grave Grippers";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.label7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
             // 
             // label5
             // 
@@ -157,6 +163,7 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Brick Tip";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
             // 
             // label4
             // 
@@ -180,6 +187,7 @@
             this.label3.Size = new System.Drawing.Size(97, 26);
             this.label3.TabIndex = 5;
             this.label3.Text = "type shi";
+            this.label3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
             // label2
             // 
@@ -192,6 +200,7 @@
             this.label2.Size = new System.Drawing.Size(127, 40);
             this.label2.TabIndex = 4;
             this.label2.Text = "Cardi B";
+            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
             // panel2
             // 
@@ -237,16 +246,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Choose a nail shape";
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Location = new System.Drawing.Point(582, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(169, 335);
-            this.panel4.TabIndex = 10;
-            // 
-            // Form1
+            // Choice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,8 +256,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(826, 565);
-            this.Name = "Form1";
+            this.Name = "Choice";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Choice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -266,8 +267,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -289,6 +288,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel4;
     }
 }

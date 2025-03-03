@@ -24,7 +24,10 @@ namespace SalonUgi
 
         private void PlayBtn_Click(object sender, EventArgs e)
         {
-
+            Choice form = new Choice();
+            form.FormClosed += (a, b) => { this.Show(); };
+            form.Show();
+            this.Hide();
         }
 
         private void SettingsBtn_Click(object sender, EventArgs e)

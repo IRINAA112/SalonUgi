@@ -54,11 +54,11 @@
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Palace Script MT", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.title.Location = new System.Drawing.Point(99, 10);
+            this.title.Location = new System.Drawing.Point(48, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(510, 111);
+            this.title.Size = new System.Drawing.Size(590, 111);
             this.title.TabIndex = 0;
-            this.title.Text = "Salonul de Ugi ";
+            this.title.Text = "Salonul de Unghii";
             // 
             // panel2
             // 

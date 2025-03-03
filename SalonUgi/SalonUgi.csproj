@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BrickTips.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="BrickTips.Designer.cs">
+      <DependentUpon>BrickTips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Choice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choice.Designer.cs">
+      <DependentUpon>Choice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardiB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardiB.Designer.cs">
+      <DependentUpon>CardiB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraveGrippers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraveGrippers.Designer.cs">
+      <DependentUpon>GraveGrippers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuttyTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuttyTip.Designer.cs">
+      <DependentUpon>NuttyTip.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
@@ -66,8 +90,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="BrickTips.resx">
+      <DependentUpon>BrickTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardiB.resx">
+      <DependentUpon>CardiB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Choice.resx">
+      <DependentUpon>Choice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraveGrippers.resx">
+      <DependentUpon>GraveGrippers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuttyTip.resx">
+      <DependentUpon>NuttyTip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
@@ -83,6 +119,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,6 +133,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_333926861_deP5hfDQadNhSuP6SLKkinpNOk64tpKN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_333926861_deP5hfDQadNhSuP6SLKkinpNOk64tpKN1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rozovyi-rozovyi-fon-pink-lak-dlia-nogtei-instrumenty-kisti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardib.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prosop-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardib1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuti1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grave.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

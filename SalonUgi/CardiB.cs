@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace SalonUgi
 {
-    public partial class Form1 : Form
+    public partial class CardiB : Form
     {
-        public Form1()
+        public CardiB()
         {
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void CardiB_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
