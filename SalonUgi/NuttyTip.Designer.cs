@@ -66,6 +66,7 @@
             this.GoBackPnl.Name = "GoBackPnl";
             this.GoBackPnl.Size = new System.Drawing.Size(90, 77);
             this.GoBackPnl.TabIndex = 3;
+            this.GoBackPnl.UseWaitCursor = true;
             // 
             // NuttyTip
             // 
@@ -73,9 +74,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SalonUgi.Properties.Resources.rozovyi_rozovyi_fon_pink_lak_dlia_nogtei_instrumenty_kisti;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1094, 676);
+            this.ClientSize = new System.Drawing.Size(1142, 683);
             this.Controls.Add(this.GoBackPnl);
             this.Controls.Add(this.panNutty);
+            this.MinimumSize = new System.Drawing.Size(1160, 730);
             this.Name = "NuttyTip";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "NuttyTip";

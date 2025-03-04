@@ -71,9 +71,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SalonUgi.Properties.Resources.rozovyi_rozovyi_fon_pink_lak_dlia_nogtei_instrumenty_kisti1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1087, 660);
+            this.ClientSize = new System.Drawing.Size(1142, 683);
             this.Controls.Add(this.GoBackPnl);
             this.Controls.Add(this.panBrick);
+            this.MinimumSize = new System.Drawing.Size(1160, 730);
             this.Name = "BrickTips";
             this.Text = "BrickTips";
             this.panBrick.ResumeLayout(false);
