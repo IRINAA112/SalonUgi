@@ -52,6 +52,8 @@
             // 
             this.title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.title.AutoSize = true;
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.title.Font = new System.Drawing.Font("Palace Script MT", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.title.Location = new System.Drawing.Point(289, 46);
@@ -80,16 +82,16 @@
             this.SettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.BackgroundImage")));
             this.SettingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SettingsBtn.Location = new System.Drawing.Point(12, 371);
+            this.SettingsBtn.Location = new System.Drawing.Point(12, 363);
             this.SettingsBtn.Name = "SettingsBtn";
-            this.SettingsBtn.Size = new System.Drawing.Size(61, 49);
+            this.SettingsBtn.Size = new System.Drawing.Size(61, 57);
             this.SettingsBtn.TabIndex = 1;
             this.SettingsBtn.UseVisualStyleBackColor = false;
             this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
             // 
             // PlayBtn
             // 
-            this.PlayBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PlayBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PlayBtn.BackColor = System.Drawing.Color.Pink;
             this.PlayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayBtn.Font = new System.Drawing.Font("Harrington", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,6 +116,7 @@
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1160, 730);
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

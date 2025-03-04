@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SalonUgi
+namespace SalonUgi.Degete.Degete_BrickTips
 {
-    public partial class CardiB : Form
+    public partial class Index : Form
     {
-        public CardiB()
+        public Index()
         {
             InitializeComponent();
-        }
-
-        private void CardiB_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panCardib_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

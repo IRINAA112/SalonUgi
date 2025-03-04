@@ -82,5 +82,10 @@ namespace SalonUgi
         {
 
         }
+
+        private void GoBackPnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

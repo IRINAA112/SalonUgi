@@ -40,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.SettingsBtn = new System.Windows.Forms.Button();
             this.GoBackPnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,7 +57,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(99, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(147, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(61, 276);
             this.pictureBox1.TabIndex = 0;
@@ -65,10 +66,11 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox2.BackColor = System.Drawing.Color.PaleVioletRed;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(606, 73);
+            this.pictureBox2.Location = new System.Drawing.Point(675, 73);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(61, 276);
             this.pictureBox2.TabIndex = 1;
@@ -77,10 +79,11 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox3.BackColor = System.Drawing.Color.PaleVioletRed;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(343, 73);
+            this.pictureBox3.Location = new System.Drawing.Point(411, 73);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(61, 274);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -91,11 +94,11 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.PaleVioletRed;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(853, 73);
+            this.pictureBox4.Location = new System.Drawing.Point(939, 73);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(61, 276);
             this.pictureBox4.TabIndex = 3;
@@ -123,11 +126,12 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Pink;
             this.label6.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.label6.Location = new System.Drawing.Point(517, 365);
+            this.label6.Location = new System.Drawing.Point(586, 365);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(239, 40);
             this.label6.TabIndex = 8;
@@ -137,12 +141,12 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Pink;
             this.label7.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.label7.Location = new System.Drawing.Point(796, 365);
+            this.label7.Location = new System.Drawing.Point(882, 365);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(174, 40);
             this.label7.TabIndex = 9;
@@ -152,12 +156,13 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Pink;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.label5.Location = new System.Drawing.Point(298, 365);
+            this.label5.Location = new System.Drawing.Point(366, 365);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(151, 40);
             this.label5.TabIndex = 7;
@@ -182,7 +187,7 @@
             this.label2.BackColor = System.Drawing.Color.Pink;
             this.label2.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.label2.Location = new System.Drawing.Point(66, 365);
+            this.label2.Location = new System.Drawing.Point(114, 365);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 40);
             this.label2.TabIndex = 4;
@@ -192,6 +197,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.SettingsBtn);
             this.panel2.Controls.Add(this.GoBackPnl);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -199,6 +205,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1143, 183);
             this.panel2.TabIndex = 5;
+            // 
+            // SettingsBtn
+            // 
+            this.SettingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SettingsBtn.BackColor = System.Drawing.Color.Pink;
+            this.SettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.BackgroundImage")));
+            this.SettingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SettingsBtn.Location = new System.Drawing.Point(953, 56);
+            this.SettingsBtn.Name = "SettingsBtn";
+            this.SettingsBtn.Size = new System.Drawing.Size(70, 70);
+            this.SettingsBtn.TabIndex = 3;
+            this.SettingsBtn.UseVisualStyleBackColor = false;
             // 
             // GoBackPnl
             // 
@@ -208,9 +227,11 @@
             this.GoBackPnl.Name = "GoBackPnl";
             this.GoBackPnl.Size = new System.Drawing.Size(107, 91);
             this.GoBackPnl.TabIndex = 2;
+            this.GoBackPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.GoBackPnl_Paint);
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Pink;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -235,6 +256,7 @@
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1160, 730);
             this.Name = "Choice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Choice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -264,5 +286,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button SettingsBtn;
     }
 }

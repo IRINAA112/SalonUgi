@@ -121,20 +121,26 @@
   <data name="rozovyi-rozovyi-fon-pink-lak-dlia-nogtei-instrumenty-kisti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\rozovyi-rozovyi-fon-pink-lak-dlia-nogtei-instrumenty-kisti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cardib1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cardib1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nuti1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuti1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="360_F_333926861_deP5hfDQadNhSuP6SLKkinpNOk64tpKN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\360_F_333926861_deP5hfDQadNhSuP6SLKkinpNOk64tpKN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nuti1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuti1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cardib1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cardib1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuti2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuti2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cardib2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cardib2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bric" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bric.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="360_F_333926861_deP5hfDQadNhSuP6SLKkinpNOk64tpKN1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\360_F_333926861_deP5hfDQadNhSuP6SLKkinpNOk64tpKN1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cardib" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cardib.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,13 +148,19 @@
   <data name="prosop-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prosop-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nuti" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="grave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bric1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bric1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rozovyi-rozovyi-fon-pink-lak-dlia-nogtei-instrumenty-kisti1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\rozovyi-rozovyi-fon-pink-lak-dlia-nogtei-instrumenty-kisti.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="360_F_333926861_deP5hfDQadNhSuP6SLKkinpNOk64tpKN1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\360_F_333926861_deP5hfDQadNhSuP6SLKkinpNOk64tpKN1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grave1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grave1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

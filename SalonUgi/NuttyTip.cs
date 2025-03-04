@@ -16,5 +16,20 @@ namespace SalonUgi
         {
             InitializeComponent();
         }
+
+        private void SettingsBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GoBackPnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NuttyTip_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

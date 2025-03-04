@@ -32,6 +32,7 @@
             this.panGrave = new System.Windows.Forms.Panel();
             this.panManaGrave = new System.Windows.Forms.Panel();
             this.GoBackPnl = new System.Windows.Forms.Panel();
+            this.SettingsBtn = new System.Windows.Forms.Button();
             this.panGrave.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,18 +42,20 @@
             this.panGrave.BackgroundImage = global::SalonUgi.Properties.Resources.prosop_removebg_preview;
             this.panGrave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panGrave.Controls.Add(this.panManaGrave);
-            this.panGrave.Location = new System.Drawing.Point(494, 12);
+            this.panGrave.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panGrave.Location = new System.Drawing.Point(547, 0);
             this.panGrave.Name = "panGrave";
-            this.panGrave.Size = new System.Drawing.Size(595, 672);
+            this.panGrave.Size = new System.Drawing.Size(595, 696);
             this.panGrave.TabIndex = 0;
             // 
             // panManaGrave
             // 
-            this.panManaGrave.BackgroundImage = global::SalonUgi.Properties.Resources.grave;
-            this.panManaGrave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panManaGrave.Location = new System.Drawing.Point(-186, 108);
+            this.panManaGrave.BackgroundImage = global::SalonUgi.Properties.Resources.grave1;
+            this.panManaGrave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panManaGrave.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panManaGrave.Location = new System.Drawing.Point(0, 132);
             this.panManaGrave.Name = "panManaGrave";
-            this.panManaGrave.Size = new System.Drawing.Size(758, 564);
+            this.panManaGrave.Size = new System.Drawing.Size(595, 564);
             this.panManaGrave.TabIndex = 0;
             // 
             // GoBackPnl
@@ -65,17 +68,32 @@
             this.GoBackPnl.Size = new System.Drawing.Size(92, 81);
             this.GoBackPnl.TabIndex = 3;
             // 
+            // SettingsBtn
+            // 
+            this.SettingsBtn.BackColor = System.Drawing.Color.Pink;
+            this.SettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.BackgroundImage")));
+            this.SettingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SettingsBtn.Location = new System.Drawing.Point(41, 144);
+            this.SettingsBtn.Name = "SettingsBtn";
+            this.SettingsBtn.Size = new System.Drawing.Size(70, 70);
+            this.SettingsBtn.TabIndex = 4;
+            this.SettingsBtn.UseVisualStyleBackColor = false;
+            // 
             // GraveGrippers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::SalonUgi.Properties.Resources.rozovyi_rozovyi_fon_pink_lak_dlia_nogtei_instrumenty_kisti;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1142, 696);
+            this.Controls.Add(this.SettingsBtn);
             this.Controls.Add(this.GoBackPnl);
             this.Controls.Add(this.panGrave);
             this.MinimumSize = new System.Drawing.Size(1160, 730);
             this.Name = "GraveGrippers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panGrave.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -87,5 +105,6 @@
         private System.Windows.Forms.Panel panGrave;
         private System.Windows.Forms.Panel panManaGrave;
         private System.Windows.Forms.Panel GoBackPnl;
+        private System.Windows.Forms.Button SettingsBtn;
     }
 }

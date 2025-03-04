@@ -37,6 +37,7 @@
             this.panInelCardi = new System.Windows.Forms.Panel();
             this.panMicCardi = new System.Windows.Forms.Panel();
             this.GoBackPnl = new System.Windows.Forms.Panel();
+            this.SettingsBtn = new System.Windows.Forms.Button();
             this.panCardib.SuspendLayout();
             this.manaCardi.SuspendLayout();
             this.SuspendLayout();
@@ -47,31 +48,33 @@
             this.panCardib.BackgroundImage = global::SalonUgi.Properties.Resources.prosop_removebg_preview;
             this.panCardib.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panCardib.Controls.Add(this.manaCardi);
-            this.panCardib.Location = new System.Drawing.Point(498, 12);
+            this.panCardib.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panCardib.Location = new System.Drawing.Point(524, 0);
             this.panCardib.Name = "panCardib";
-            this.panCardib.Size = new System.Drawing.Size(582, 660);
+            this.panCardib.Size = new System.Drawing.Size(618, 683);
             this.panCardib.TabIndex = 0;
+            this.panCardib.Paint += new System.Windows.Forms.PaintEventHandler(this.panCardib_Paint);
             // 
             // manaCardi
             // 
-            this.manaCardi.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.manaCardi.BackgroundImage = global::SalonUgi.Properties.Resources.cardib1;
-            this.manaCardi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.manaCardi.BackColor = System.Drawing.Color.Transparent;
+            this.manaCardi.BackgroundImage = global::SalonUgi.Properties.Resources.cardib2;
+            this.manaCardi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.manaCardi.Controls.Add(this.panMareCardi);
             this.manaCardi.Controls.Add(this.panIndexCardi);
             this.manaCardi.Controls.Add(this.panMijCardi);
             this.manaCardi.Controls.Add(this.panInelCardi);
             this.manaCardi.Controls.Add(this.panMicCardi);
-            this.manaCardi.Location = new System.Drawing.Point(-58, 70);
+            this.manaCardi.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.manaCardi.Location = new System.Drawing.Point(0, 70);
             this.manaCardi.MaximumSize = new System.Drawing.Size(0, 700);
-            this.manaCardi.MinimumSize = new System.Drawing.Size(515, 590);
             this.manaCardi.Name = "manaCardi";
-            this.manaCardi.Size = new System.Drawing.Size(515, 590);
+            this.manaCardi.Size = new System.Drawing.Size(618, 613);
             this.manaCardi.TabIndex = 0;
             // 
             // panMareCardi
             // 
-            this.panMareCardi.Location = new System.Drawing.Point(357, 213);
+            this.panMareCardi.Location = new System.Drawing.Point(360, 207);
             this.panMareCardi.Name = "panMareCardi";
             this.panMareCardi.Size = new System.Drawing.Size(86, 110);
             this.panMareCardi.TabIndex = 4;
@@ -87,6 +90,7 @@
             // 
             this.panMijCardi.Location = new System.Drawing.Point(252, 38);
             this.panMijCardi.Name = "panMijCardi";
+            this.panMijCardi.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panMijCardi.Size = new System.Drawing.Size(31, 139);
             this.panMijCardi.TabIndex = 2;
             // 
@@ -114,18 +118,32 @@
             this.GoBackPnl.Size = new System.Drawing.Size(85, 78);
             this.GoBackPnl.TabIndex = 3;
             // 
+            // SettingsBtn
+            // 
+            this.SettingsBtn.BackColor = System.Drawing.Color.Pink;
+            this.SettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.BackgroundImage")));
+            this.SettingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SettingsBtn.Location = new System.Drawing.Point(33, 130);
+            this.SettingsBtn.Name = "SettingsBtn";
+            this.SettingsBtn.Size = new System.Drawing.Size(70, 70);
+            this.SettingsBtn.TabIndex = 4;
+            this.SettingsBtn.UseVisualStyleBackColor = false;
+            // 
             // CardiB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::SalonUgi.Properties.Resources.rozovyi_rozovyi_fon_pink_lak_dlia_nogtei_instrumenty_kisti;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1142, 683);
+            this.Controls.Add(this.SettingsBtn);
             this.Controls.Add(this.GoBackPnl);
             this.Controls.Add(this.panCardib);
-            this.MaximumSize = new System.Drawing.Size(1160, 730);
             this.MinimumSize = new System.Drawing.Size(1160, 730);
             this.Name = "CardiB";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.CardiB_Load);
             this.panCardib.ResumeLayout(false);
@@ -144,5 +162,6 @@
         private System.Windows.Forms.Panel panIndexCardi;
         private System.Windows.Forms.Panel panMijCardi;
         private System.Windows.Forms.Panel GoBackPnl;
+        private System.Windows.Forms.Button SettingsBtn;
     }
 }

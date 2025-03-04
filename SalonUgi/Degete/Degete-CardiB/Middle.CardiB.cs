@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SalonUgi
+namespace SalonUgi.Degete.Degete_CardiB
 {
-    public partial class CardiB : Form
+    public partial class Middle : Form
     {
-        public CardiB()
+        public Middle()
         {
             InitializeComponent();
-        }
-
-        private void CardiB_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panCardib_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

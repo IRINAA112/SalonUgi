@@ -93,6 +93,16 @@ namespace SalonUgi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bric1 {
+            get {
+                object obj = ResourceManager.GetObject("bric1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cardib {
             get {
                 object obj = ResourceManager.GetObject("cardib", resourceCulture);
@@ -113,9 +123,29 @@ namespace SalonUgi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cardib2 {
+            get {
+                object obj = ResourceManager.GetObject("cardib2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grave {
             get {
                 object obj = ResourceManager.GetObject("grave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grave1 {
+            get {
+                object obj = ResourceManager.GetObject("grave1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +166,16 @@ namespace SalonUgi.Properties {
         internal static System.Drawing.Bitmap nuti1 {
             get {
                 object obj = ResourceManager.GetObject("nuti1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nuti2 {
+            get {
+                object obj = ResourceManager.GetObject("nuti2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
