@@ -218,6 +218,7 @@
             this.SettingsBtn.Size = new System.Drawing.Size(70, 70);
             this.SettingsBtn.TabIndex = 3;
             this.SettingsBtn.UseVisualStyleBackColor = false;
+            this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
             // 
             // GoBackPnl
             // 
@@ -228,6 +229,7 @@
             this.GoBackPnl.Size = new System.Drawing.Size(107, 91);
             this.GoBackPnl.TabIndex = 2;
             this.GoBackPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.GoBackPnl_Paint);
+            this.GoBackPnl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GoBackPnl_MouseClick);
             // 
             // label1
             // 

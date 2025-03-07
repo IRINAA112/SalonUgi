@@ -44,14 +44,16 @@
             // 
             // panCardib
             // 
+            this.panCardib.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panCardib.BackColor = System.Drawing.Color.Transparent;
             this.panCardib.BackgroundImage = global::SalonUgi.Properties.Resources.prosop_removebg_preview;
             this.panCardib.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panCardib.Controls.Add(this.manaCardi);
-            this.panCardib.Dock = System.Windows.Forms.DockStyle.Right;
             this.panCardib.Location = new System.Drawing.Point(524, 0);
+            this.panCardib.MinimumSize = new System.Drawing.Size(620, 0);
             this.panCardib.Name = "panCardib";
-            this.panCardib.Size = new System.Drawing.Size(618, 683);
+            this.panCardib.Size = new System.Drawing.Size(620, 683);
             this.panCardib.TabIndex = 0;
             this.panCardib.Paint += new System.Windows.Forms.PaintEventHandler(this.panCardib_Paint);
             // 
@@ -69,7 +71,7 @@
             this.manaCardi.Location = new System.Drawing.Point(0, 70);
             this.manaCardi.MaximumSize = new System.Drawing.Size(0, 700);
             this.manaCardi.Name = "manaCardi";
-            this.manaCardi.Size = new System.Drawing.Size(618, 613);
+            this.manaCardi.Size = new System.Drawing.Size(620, 613);
             this.manaCardi.TabIndex = 0;
             // 
             // panMareCardi
@@ -117,6 +119,8 @@
             this.GoBackPnl.Name = "GoBackPnl";
             this.GoBackPnl.Size = new System.Drawing.Size(85, 78);
             this.GoBackPnl.TabIndex = 3;
+            this.GoBackPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.GoBackPnl_Paint);
+            this.GoBackPnl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GoBackPnl_MouseClick);
             // 
             // SettingsBtn
             // 
@@ -129,6 +133,7 @@
             this.SettingsBtn.Size = new System.Drawing.Size(70, 70);
             this.SettingsBtn.TabIndex = 4;
             this.SettingsBtn.UseVisualStyleBackColor = false;
+            this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
             // 
             // CardiB
             // 

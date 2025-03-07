@@ -82,24 +82,24 @@
             this.SettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.BackgroundImage")));
             this.SettingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SettingsBtn.Location = new System.Drawing.Point(12, 363);
+            this.SettingsBtn.Location = new System.Drawing.Point(12, 350);
             this.SettingsBtn.Name = "SettingsBtn";
-            this.SettingsBtn.Size = new System.Drawing.Size(61, 57);
+            this.SettingsBtn.Size = new System.Drawing.Size(70, 70);
             this.SettingsBtn.TabIndex = 1;
             this.SettingsBtn.UseVisualStyleBackColor = false;
             this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
             // 
             // PlayBtn
             // 
-            this.PlayBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PlayBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.PlayBtn.BackColor = System.Drawing.Color.Pink;
             this.PlayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayBtn.Font = new System.Drawing.Font("Harrington", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlayBtn.ForeColor = System.Drawing.Color.DeepPink;
-            this.PlayBtn.Location = new System.Drawing.Point(388, 167);
+            this.PlayBtn.Location = new System.Drawing.Point(269, 134);
             this.PlayBtn.MinimumSize = new System.Drawing.Size(350, 100);
             this.PlayBtn.Name = "PlayBtn";
-            this.PlayBtn.Size = new System.Drawing.Size(367, 100);
+            this.PlayBtn.Size = new System.Drawing.Size(620, 100);
             this.PlayBtn.TabIndex = 0;
             this.PlayBtn.Text = "PLAY";
             this.PlayBtn.UseVisualStyleBackColor = false;

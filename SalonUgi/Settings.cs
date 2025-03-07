@@ -85,5 +85,15 @@ namespace SalonUgi
                 player.Stop();
             }
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SettingsLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

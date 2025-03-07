@@ -52,20 +52,21 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.SongDpropDown);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(195, 12);
+            this.panel1.Location = new System.Drawing.Point(333, 12);
             this.panel1.MaximumSize = new System.Drawing.Size(500, 0);
-            this.panel1.MinimumSize = new System.Drawing.Size(375, 501);
+            this.panel1.MinimumSize = new System.Drawing.Size(500, 660);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(375, 501);
+            this.panel1.Size = new System.Drawing.Size(500, 660);
             this.panel1.TabIndex = 0;
             // 
             // SetingsGoBackBtn
             // 
+            this.SetingsGoBackBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SetingsGoBackBtn.BackColor = System.Drawing.Color.Transparent;
             this.SetingsGoBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SetingsGoBackBtn.Font = new System.Drawing.Font("MV Boli", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SetingsGoBackBtn.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.SetingsGoBackBtn.Location = new System.Drawing.Point(93, 401);
+            this.SetingsGoBackBtn.Location = new System.Drawing.Point(155, 484);
             this.SetingsGoBackBtn.Name = "SetingsGoBackBtn";
             this.SetingsGoBackBtn.Size = new System.Drawing.Size(191, 61);
             this.SetingsGoBackBtn.TabIndex = 5;
@@ -75,13 +76,13 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.SoundVolumeLbl);
-            this.panel3.Location = new System.Drawing.Point(3, 105);
+            this.panel3.Location = new System.Drawing.Point(66, 105);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(369, 130);
             this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -132,7 +133,7 @@
             "Emo",
             "Patriotic",
             "NPC"});
-            this.SongDpropDown.Location = new System.Drawing.Point(44, 231);
+            this.SongDpropDown.Location = new System.Drawing.Point(113, 231);
             this.SongDpropDown.Name = "SongDpropDown";
             this.SongDpropDown.Size = new System.Drawing.Size(275, 52);
             this.SongDpropDown.TabIndex = 1;
@@ -145,7 +146,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(375, 99);
+            this.panel2.Size = new System.Drawing.Size(500, 99);
             this.panel2.TabIndex = 0;
             // 
             // SettingsLbl
@@ -153,11 +154,12 @@
             this.SettingsLbl.AutoSize = true;
             this.SettingsLbl.Font = new System.Drawing.Font("Harrington", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsLbl.ForeColor = System.Drawing.Color.DeepPink;
-            this.SettingsLbl.Location = new System.Drawing.Point(87, 20);
+            this.SettingsLbl.Location = new System.Drawing.Point(152, 20);
             this.SettingsLbl.Name = "SettingsLbl";
             this.SettingsLbl.Size = new System.Drawing.Size(197, 55);
             this.SettingsLbl.TabIndex = 0;
             this.SettingsLbl.Text = "Settings";
+            this.SettingsLbl.Click += new System.EventHandler(this.SettingsLbl_Click);
             // 
             // Settings
             // 
@@ -165,12 +167,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(732, 554);
+            this.ClientSize = new System.Drawing.Size(1142, 683);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(750, 601);
+            this.MinimumSize = new System.Drawing.Size(1160, 730);
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
