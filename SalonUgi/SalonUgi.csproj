@@ -58,6 +58,12 @@
     <Compile Include="HandForm.Designer.cs">
       <DependentUpon>HandForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NailDraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NailDraw.Designer.cs">
+      <DependentUpon>NailDraw.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HandForm.resx">
       <DependentUpon>HandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NailDraw.resx">
+      <DependentUpon>NailDraw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>

@@ -63,6 +63,7 @@
             this.panManaNutty.Size = new System.Drawing.Size(602, 623);
             this.panManaNutty.TabIndex = 0;
             this.panManaNutty.UseWaitCursor = true;
+            this.panManaNutty.Click += new System.EventHandler(this.panManaNutty_Click);
             this.panManaNutty.Paint += new System.Windows.Forms.PaintEventHandler(this.panManaNutty_Paint);
             // 
             // GoBackPnl
@@ -92,7 +93,7 @@
             this.SettingsBtn.UseWaitCursor = true;
             this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
             // 
-            // NuttyTip
+            // HandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,7 +105,7 @@
             this.Controls.Add(this.GoBackPnl);
             this.Controls.Add(this.panNutty);
             this.MinimumSize = new System.Drawing.Size(1160, 730);
-            this.Name = "NuttyTip";
+            this.Name = "HandForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuttyTip";
             this.UseWaitCursor = true;

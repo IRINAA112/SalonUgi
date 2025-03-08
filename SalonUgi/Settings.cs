@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AxWMPLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,19 +57,19 @@ namespace SalonUgi
             switch (SelectedSong)
             {
                 case "Emo":
-                    player.SoundLocation = Emo[random.Next(0, Emo.Length )];
+                    axWindowsMediaPlayer1.URL= Emo[random.Next(0, Emo.Length )];
                     break;
                 case "Manele":
-                    player.SoundLocation = Manele[random.Next(0, Manele.Length)];
+                    axWindowsMediaPlayer1.URL = Manele[random.Next(0, Manele.Length)];
                     break;
                 case "Patriotic":
-                    player.SoundLocation = Patriotic[random.Next(0, Patriotic.Length)];
+                    axWindowsMediaPlayer1.URL = Patriotic[random.Next(0, Patriotic.Length)];
                     break;
                 case "NPC":
-                    player.SoundLocation = NPC[random.Next(0, NPC.Length)];
+                    axWindowsMediaPlayer1.URL = NPC[random.Next(0, NPC.Length)];
                     break;
                 default:
-                    player.SoundLocation = "buci.wav";
+                    axWindowsMediaPlayer1.URL = "buci.wav";
                     break;
             }
             player.PlayLooping();
@@ -82,7 +83,7 @@ namespace SalonUgi
             }
             else
             {
-                player.Stop();
+                axWindowsMediaPlayer1.Ctlcontrols.stop();
             }
         }
 
@@ -99,6 +100,11 @@ namespace SalonUgi
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
 
+        }
+
+        private void trackBar1_Scroll_1(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.settings.volume = trackBar1.Value;
         }
     }
 }

@@ -39,20 +39,22 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.SettingsLbl = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BackColor = System.Drawing.Color.Pink;
+            this.panel1.Controls.Add(this.axWindowsMediaPlayer1);
             this.panel1.Controls.Add(this.SetingsGoBackBtn);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.axWindowsMediaPlayer1);
             this.panel1.Controls.Add(this.SongDpropDown);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(333, 12);
@@ -79,6 +81,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.trackBar1);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.SoundVolumeLbl);
             this.panel3.Location = new System.Drawing.Point(66, 105);
@@ -118,7 +121,7 @@
             this.SoundVolumeLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SoundVolumeLbl.Font = new System.Drawing.Font("MV Boli", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoundVolumeLbl.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.SoundVolumeLbl.Location = new System.Drawing.Point(42, 13);
+            this.SoundVolumeLbl.Location = new System.Drawing.Point(46, 13);
             this.SoundVolumeLbl.Name = "SoundVolumeLbl";
             this.SoundVolumeLbl.Size = new System.Drawing.Size(273, 44);
             this.SoundVolumeLbl.TabIndex = 3;
@@ -167,11 +170,21 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(425, 470);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(129, 408);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(10, 10);
-            this.axWindowsMediaPlayer1.TabIndex = 5;
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(306, 49);
+            this.axWindowsMediaPlayer1.TabIndex = 6;
+            this.axWindowsMediaPlayer1.Visible = false;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(50, 60);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(265, 56);
+            this.trackBar1.TabIndex = 5;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll_1);
             // 
             // Settings
             // 
@@ -194,6 +207,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +224,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.CheckBox SounCheckBox;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }

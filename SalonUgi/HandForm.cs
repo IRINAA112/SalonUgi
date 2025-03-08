@@ -63,5 +63,13 @@ namespace SalonUgi
         {
 
         }
+
+        private void panManaNutty_Click(object sender, EventArgs e)
+        {
+            NailDraw form = new NailDraw();
+            form.FormClosed += (a, b) => { this.Show(); };
+            form.Show();
+            this.Hide();
+        }
     }
 }
