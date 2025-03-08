@@ -10,11 +10,30 @@ using System.Windows.Forms;
 
 namespace SalonUgi
 {
-    public partial class NuttyTip : Form
+    public partial class HandForm : Form
     {
-        public NuttyTip()
+
+        string imagine;
+        public HandForm(string nailtype)
         {
+
             InitializeComponent();
+            switch (nailtype)
+            {
+                case "GraveGrippers":
+                    this.panManaNutty.BackgroundImage = Properties.Resources.grave1;
+                    break;
+                case "BrickTips":
+                    this.panManaNutty.BackgroundImage = Properties.Resources.bric1;
+                    break;
+                case "CardiB":
+                    this.panManaNutty.BackgroundImage = Properties.Resources.cardib2;
+                    break;
+                case "NuttyTips":
+                    this.panManaNutty.BackgroundImage = Properties.Resources.nuti2;
+                    break;
+            }
+
         }
 
         private void SettingsBtn_Click(object sender, EventArgs e)
@@ -38,6 +57,11 @@ namespace SalonUgi
         private void GoBackPnl_MouseClick(object sender, MouseEventArgs e)
         {
             this.Close();
+        }
+
+        private void panManaNutty_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

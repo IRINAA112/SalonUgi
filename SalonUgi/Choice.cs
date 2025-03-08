@@ -30,7 +30,7 @@ namespace SalonUgi
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
             //grave grippers
-            GraveGrippers form = new GraveGrippers();
+            HandForm form = new HandForm("GraveGrippers");
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();
@@ -39,7 +39,7 @@ namespace SalonUgi
         private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
         {
             //Brick
-            BrickTips form = new BrickTips();
+            HandForm form = new HandForm("BrickTips");
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();
@@ -48,7 +48,7 @@ namespace SalonUgi
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             //Cardi
-            CardiB form = new CardiB();
+            HandForm form = new HandForm("CardiB");
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();
@@ -57,7 +57,7 @@ namespace SalonUgi
         private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
         {
             //Nutty
-            NuttyTip form = new NuttyTip();
+            HandForm form = new HandForm("NuttyTip");
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();

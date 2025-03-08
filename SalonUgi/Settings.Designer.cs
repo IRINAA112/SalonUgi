@@ -38,10 +38,12 @@
             this.SongDpropDown = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.SettingsLbl = new System.Windows.Forms.Label();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,6 +52,7 @@
             this.panel1.BackColor = System.Drawing.Color.Pink;
             this.panel1.Controls.Add(this.SetingsGoBackBtn);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.axWindowsMediaPlayer1);
             this.panel1.Controls.Add(this.SongDpropDown);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(333, 12);
@@ -80,7 +83,7 @@
             this.panel3.Controls.Add(this.SoundVolumeLbl);
             this.panel3.Location = new System.Drawing.Point(66, 105);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(369, 130);
+            this.panel3.Size = new System.Drawing.Size(369, 187);
             this.panel3.TabIndex = 4;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -88,7 +91,7 @@
             // 
             this.panel4.Controls.Add(this.SounCheckBox);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 61);
+            this.panel4.Location = new System.Drawing.Point(0, 118);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(369, 69);
             this.panel4.TabIndex = 4;
@@ -125,6 +128,7 @@
             // SongDpropDown
             // 
             this.SongDpropDown.BackColor = System.Drawing.Color.Pink;
+            this.SongDpropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SongDpropDown.Font = new System.Drawing.Font("MV Boli", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SongDpropDown.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.SongDpropDown.FormattingEnabled = true;
@@ -133,11 +137,10 @@
             "Emo",
             "Patriotic",
             "NPC"});
-            this.SongDpropDown.Location = new System.Drawing.Point(113, 231);
+            this.SongDpropDown.Location = new System.Drawing.Point(116, 298);
             this.SongDpropDown.Name = "SongDpropDown";
             this.SongDpropDown.Size = new System.Drawing.Size(275, 52);
             this.SongDpropDown.TabIndex = 1;
-            this.SongDpropDown.Text = "Choose a song";
             this.SongDpropDown.SelectedIndexChanged += new System.EventHandler(this.SongDpropDown_SelectedIndexChanged);
             // 
             // panel2
@@ -161,6 +164,15 @@
             this.SettingsLbl.Text = "Settings";
             this.SettingsLbl.Click += new System.EventHandler(this.SettingsLbl_Click);
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(425, 470);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(10, 10);
+            this.axWindowsMediaPlayer1.TabIndex = 5;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -181,6 +193,7 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,5 +209,6 @@
         private System.Windows.Forms.Button SetingsGoBackBtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.CheckBox SounCheckBox;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }

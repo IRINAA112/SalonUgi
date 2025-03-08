@@ -46,125 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BrickTips.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BrickTips.Designer.cs">
-      <DependentUpon>BrickTips.cs</DependentUpon>
-    </Compile>
     <Compile Include="Choice.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Choice.Designer.cs">
       <DependentUpon>Choice.cs</DependentUpon>
     </Compile>
-    <Compile Include="CardiB.cs">
+    <Compile Include="HandForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CardiB.Designer.cs">
-      <DependentUpon>CardiB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Little.BrickTip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Little.BrickTip.Designer.cs">
-      <DependentUpon>Little.BrickTip.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Index.BrickTip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Index.BrickTip.Designer.cs">
-      <DependentUpon>Index.BrickTip.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Middle.BrickTip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Middle.BrickTip.Designer.cs">
-      <DependentUpon>Middle.BrickTip.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Ring.BrickTip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Ring.BrickTip.Designer.cs">
-      <DependentUpon>Ring.BrickTip.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Thumb.BrickTip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-BrickTips\Thumb.BrickTip.Designer.cs">
-      <DependentUpon>Thumb.BrickTip.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Index.CardiB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Index.CardiB.Designer.cs">
-      <DependentUpon>Index.CardiB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Little.CardiB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Little.CardiB.Designer.cs">
-      <DependentUpon>Little.CardiB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Middle.CardiB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Middle.CardiB.Designer.cs">
-      <DependentUpon>Middle.CardiB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Ring.CardiB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Ring.CardiB.Designer.cs">
-      <DependentUpon>Ring.CardiB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Thumb.CardiB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-CardiB\Thumb.CardiB.Designer.cs">
-      <DependentUpon>Thumb.CardiB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Index.GraveGrippers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Index.GraveGrippers.Designer.cs">
-      <DependentUpon>Index.GraveGrippers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Little.GraveGrippers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Little.GraveGrippers.Designer.cs">
-      <DependentUpon>Little.GraveGrippers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Middle.GraveGrippers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Middle.GraveGrippers.Designer.cs">
-      <DependentUpon>Middle.GraveGrippers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Ring.GraveGrippers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Ring.GraveGrippers.Designer.cs">
-      <DependentUpon>Ring.GraveGrippers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Thumb.GraveGrippers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Degete\Degete-GraveGrippers\Thumb.GraveGrippers.Designer.cs">
-      <DependentUpon>Thumb.GraveGrippers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GraveGrippers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GraveGrippers.Designer.cs">
-      <DependentUpon>GraveGrippers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NuttyTip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NuttyTip.Designer.cs">
-      <DependentUpon>NuttyTip.cs</DependentUpon>
+    <Compile Include="HandForm.Designer.cs">
+      <DependentUpon>HandForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
@@ -180,20 +72,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BrickTips.resx">
-      <DependentUpon>BrickTips.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CardiB.resx">
-      <DependentUpon>CardiB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Choice.resx">
       <DependentUpon>Choice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GraveGrippers.resx">
-      <DependentUpon>GraveGrippers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NuttyTip.resx">
-      <DependentUpon>NuttyTip.cs</DependentUpon>
+    <EmbeddedResource Include="HandForm.resx">
+      <DependentUpon>HandForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
@@ -266,8 +149,25 @@
   <ItemGroup>
     <None Include="Resources\grave1.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Degete\Degete-NuttyTip\" />
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
