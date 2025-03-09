@@ -29,42 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HandForm));
-            this.panNutty = new System.Windows.Forms.Panel();
-            this.panManaNutty = new System.Windows.Forms.Panel();
+            this.panelProsop = new System.Windows.Forms.Panel();
+            this.panelMana = new System.Windows.Forms.Panel();
             this.GoBackPnl = new System.Windows.Forms.Panel();
             this.SettingsBtn = new System.Windows.Forms.Button();
-            this.panNutty.SuspendLayout();
+            this.panelProsop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panNutty
+            // panelProsop
             // 
-            this.panNutty.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelProsop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panNutty.BackColor = System.Drawing.Color.Transparent;
-            this.panNutty.BackgroundImage = global::SalonUgi.Properties.Resources.prosop_removebg_preview;
-            this.panNutty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panNutty.Controls.Add(this.panManaNutty);
-            this.panNutty.Location = new System.Drawing.Point(540, 0);
-            this.panNutty.Name = "panNutty";
-            this.panNutty.Size = new System.Drawing.Size(602, 683);
-            this.panNutty.TabIndex = 0;
-            this.panNutty.UseWaitCursor = true;
+            this.panelProsop.BackColor = System.Drawing.Color.Transparent;
+            this.panelProsop.BackgroundImage = global::SalonUgi.Properties.Resources.prosop_removebg_preview;
+            this.panelProsop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelProsop.Controls.Add(this.panelMana);
+            this.panelProsop.Location = new System.Drawing.Point(540, 0);
+            this.panelProsop.Name = "panelProsop";
+            this.panelProsop.Size = new System.Drawing.Size(602, 683);
+            this.panelProsop.TabIndex = 0;
+            this.panelProsop.UseWaitCursor = true;
             // 
-            // panManaNutty
+            // panelMana
             // 
-            this.panManaNutty.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelMana.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panManaNutty.BackgroundImage = global::SalonUgi.Properties.Resources.nuti2;
-            this.panManaNutty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panManaNutty.Location = new System.Drawing.Point(0, 133);
-            this.panManaNutty.Name = "panManaNutty";
-            this.panManaNutty.Size = new System.Drawing.Size(602, 623);
-            this.panManaNutty.TabIndex = 0;
-            this.panManaNutty.UseWaitCursor = true;
-            this.panManaNutty.Click += new System.EventHandler(this.panManaNutty_Click);
-            this.panManaNutty.Paint += new System.Windows.Forms.PaintEventHandler(this.panManaNutty_Paint);
+            this.panelMana.BackgroundImage = global::SalonUgi.Properties.Resources.nuti2;
+            this.panelMana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelMana.Location = new System.Drawing.Point(0, 133);
+            this.panelMana.Name = "panelMana";
+            this.panelMana.Size = new System.Drawing.Size(602, 623);
+            this.panelMana.TabIndex = 0;
+            this.panelMana.UseWaitCursor = true;
+            this.panelMana.Click += new System.EventHandler(this.panManaNutty_Click);
+            this.panelMana.Paint += new System.Windows.Forms.PaintEventHandler(this.panManaNutty_Paint);
             // 
             // GoBackPnl
             // 
@@ -103,22 +103,22 @@
             this.ClientSize = new System.Drawing.Size(1142, 683);
             this.Controls.Add(this.SettingsBtn);
             this.Controls.Add(this.GoBackPnl);
-            this.Controls.Add(this.panNutty);
+            this.Controls.Add(this.panelProsop);
             this.MinimumSize = new System.Drawing.Size(1160, 730);
             this.Name = "HandForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NuttyTip";
+            this.Text = "Hand Form";
             this.UseWaitCursor = true;
-            this.Load += new System.EventHandler(this.NuttyTip_Load);
-            this.panNutty.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.HandForm_Load);
+            this.panelProsop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panNutty;
-        private System.Windows.Forms.Panel panManaNutty;
+        private System.Windows.Forms.Panel panelProsop;
+        private System.Windows.Forms.Panel panelMana;
         private System.Windows.Forms.Panel GoBackPnl;
         private System.Windows.Forms.Button SettingsBtn;
     }

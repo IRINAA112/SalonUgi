@@ -25,9 +25,12 @@ namespace SalonUgi
 {
     public partial class NailDraw : Form
     {
-        public NailDraw()
+        string tipDeget, tipUnghie;
+        public NailDraw( string Deget, string Unghie)
         {
             InitializeComponent();
+            tipDeget = Deget;   
+            tipUnghie = Unghie;
         }
         Boolean desenare=new Boolean(); 
 
@@ -73,16 +76,10 @@ namespace SalonUgi
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Bitmap finger = new Bitmap("degettest.png");
+            Bitmap finger = new Bitmap(tipDeget);
             g.DrawImage(finger, 0, 0);
-            g.Clip=ConvertSvgPathToRegion("M 53.4807 103.028 C 52.8451 139.853 43.1649 151.621 28.5658 151.369 C 13.9668 151.117 -0.0226613 138.94 0.612988 102.115 C 1.24864 65.2896 14.1101 0.337725 28.7091 0.589875 C 43.3081 0.842025 54.1164 66.2027 53.4807 103.028 Z ");
-            ///Region clipRegion = new Region(new Rectangle(0, 0, 300,300));
-
-            // Set clipping region of graphics to region.
-            ///g.SetClip(clipRegion, CombineMode.Replace);
-
-            // Fill rectangle to demonstrate clip region.
-            g.FillRectangle(new SolidBrush(Color.Black), 0, 0, 500, 300);
+            g.Clip=ConvertSvgPathToRegion(tipUnghie);
+            
             for (int i = 0; i < Linii.Count; i++)
             {
                 for (int j = 1; j < Linii[i].points.Count; j++)
@@ -120,8 +117,8 @@ namespace SalonUgi
         private Region ConvertSvgPathToRegion(string svgPath)
         {
             GraphicsPath path = new GraphicsPath();
-            float offsetX = 291;
-            float offsetY = 191;
+            float offsetX = 385;
+            float offsetY = 144;
 
             float startX = 0, startY = 0; 
             float firstX = 0, firstY = 0; 
@@ -187,6 +184,24 @@ namespace SalonUgi
         private void sticker_2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void GoBackPnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void GoBackPnl_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SettingsBtn_Click(object sender, EventArgs e)
+        {
+            Settings form = new Settings();
+            form.FormClosed += (a, b) => { this.Show(); };
+            form.Show();
+            this.Hide();
         }
     }
 }
