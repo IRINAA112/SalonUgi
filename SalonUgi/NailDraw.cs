@@ -10,31 +10,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-struct Linie
-{
-    public Pen culoare;
-    public List<Point> points;
-    public Linie(Pen culoare)
-    {
-        this.points = new List<Point>();
-        this.culoare = culoare; 
-    }
-}
+
 
 namespace SalonUgi
 {
+    
     public partial class NailDraw : Form
     {
-        string tipDeget, tipUnghie;
-        public NailDraw( string Deget, string Unghie)
+        ConfigurareUnghie configU;
+        List<Linie> Linii;
+        public NailDraw( ConfigurareUnghie x, List<Linie>y)
         {
             InitializeComponent();
-            tipDeget = Deget;   
-            tipUnghie = Unghie;
+            configU = x;
+            Linii = y;
         }
+
         Boolean desenare=new Boolean(); 
 
-        List<Linie> Linii=new List<Linie>();
+        
         Pen selectedColor = Pens.Black;
         int desiredWidth= 1 ;
 
@@ -76,14 +70,16 @@ namespace SalonUgi
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Bitmap finger = new Bitmap(tipDeget);
-            g.DrawImage(finger, 0, 0);
-            g.Clip=ConvertSvgPathToRegion(tipUnghie);
-            
+            Bitmap finger = new Bitmap(configU.tipDeget);
+           
+            g.DrawImage(finger, configU.imageX, configU.imageY);
+            g.Clip=ConvertSvgPathToRegion(configU.tipUnghie, configU.offsetX, configU.offsetY);
+            g.FillRectangle(Brushes.LightCoral, 0, 0, pictureBox1.Width, pictureBox1.Height);
             for (int i = 0; i < Linii.Count; i++)
             {
                 for (int j = 1; j < Linii[i].points.Count; j++)
                 {
+                    //g.FillEllipse(new SolidBrush(Linii[i].culoare.Color), Linii[i].points[j].X - Linii[i].culoare.Width, Linii[i].points[j].Y - Linii[i].culoare.Width, Convert.ToInt32(1.5*Linii[i].culoare.Width), Convert.ToInt32(1.5 *Linii[i].culoare.Width));
                     g.DrawLine(Linii[i].culoare, Linii[i].points[j - 1], Linii[i].points[j]);
                 }
             }
@@ -114,27 +110,25 @@ namespace SalonUgi
         }
 
 
-        private Region ConvertSvgPathToRegion(string svgPath)
+        private Region ConvertSvgPathToRegion(string svgPath, float offsetX, float offsetY)
         {
             GraphicsPath path = new GraphicsPath();
-            float offsetX = 385;
-            float offsetY = 144;
 
-            float startX = 0, startY = 0; 
-            float firstX = 0, firstY = 0; 
+            float startX = 0, startY = 0;  // Last point
+            float firstX = 0, firstY = 0;  // First MoveTo point
             bool hasFirstPoint = false;
 
-            string[] commands = svgPath.Split(' ');
+            // Split on spaces and commas, remove empty entries
+            string[] tokens = svgPath.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
 
-            for (int i = 0; i < commands.Length; i++)
+            for (int i = 0; i < tokens.Length; i++)
             {
-                string cmd = commands[i];
+                string cmd = tokens[i];
 
-                if (cmd == "M")
+                if (cmd == "M") // MoveTo
                 {
-                    startX = float.Parse(commands[i + 1], CultureInfo.InvariantCulture)+offsetX;
-                    startY = float.Parse(commands[i + 2], CultureInfo.InvariantCulture)+offsetY;
-                    
+                    startX = float.Parse(tokens[i + 1], CultureInfo.InvariantCulture) + offsetX;
+                    startY = float.Parse(tokens[i + 2], CultureInfo.InvariantCulture) + offsetY;
 
                     if (!hasFirstPoint)
                     {
@@ -143,28 +137,43 @@ namespace SalonUgi
                         hasFirstPoint = true;
                     }
 
-                    i += 2;
+                    i += 2; // Move past the coordinates
                 }
-                else if (cmd == "C")
+                else if (cmd == "L") // LineTo
                 {
-                    float cx1 = float.Parse(commands[i + 1], CultureInfo.InvariantCulture) + offsetX;
-                    float cy1 = float.Parse(commands[i + 2], CultureInfo.InvariantCulture) + offsetY;
-                    float cx2 = float.Parse(commands[i + 3], CultureInfo.InvariantCulture) + offsetX;
-                    float cy2 = float.Parse(commands[i + 4], CultureInfo.InvariantCulture) + offsetY;
-                    float x = float.Parse(commands[i + 5], CultureInfo.InvariantCulture) + offsetX;
-                    float y = float.Parse(commands[i + 6], CultureInfo.InvariantCulture) + offsetY;
+                    float x = float.Parse(tokens[i + 1], CultureInfo.InvariantCulture) + offsetX;
+                    float y = float.Parse(tokens[i + 2], CultureInfo.InvariantCulture) + offsetY;
 
-                    path.AddBezier(startX, startY, cx1, cy1, cx2, cy2, x, y);
-
+                    path.AddLine(startX, startY, x, y);
                     startX = x;
                     startY = y;
+
+                    i += 2;
+                }
+                else if (cmd == "C") // Cubic Bézier
+                {
+                    float cx1 = float.Parse(tokens[i + 1], CultureInfo.InvariantCulture) + offsetX;
+                    float cy1 = float.Parse(tokens[i + 2], CultureInfo.InvariantCulture) + offsetY;
+                    float cx2 = float.Parse(tokens[i + 3], CultureInfo.InvariantCulture) + offsetX;
+                    float cy2 = float.Parse(tokens[i + 4], CultureInfo.InvariantCulture) + offsetY;
+                    float x = float.Parse(tokens[i + 5], CultureInfo.InvariantCulture) + offsetX;
+                    float y = float.Parse(tokens[i + 6], CultureInfo.InvariantCulture) + offsetY;
+
+                    path.AddBezier(startX, startY, cx1, cy1, cx2, cy2, x, y);
+                    startX = x;
+                    startY = y;
+
                     i += 6;
                 }
-                else if (cmd == "Z" || cmd == "z") 
+                else if (cmd == "Z" || cmd == "z") // Close Path
                 {
-                    path.CloseFigure(); 
+                    path.CloseFigure();
                     startX = firstX;
                     startY = firstY;
+                }
+                else
+                {
+                    throw new NotSupportedException($"Unsupported SVG command: {cmd}");
                 }
             }
 

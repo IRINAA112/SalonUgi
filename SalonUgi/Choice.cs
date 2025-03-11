@@ -57,7 +57,7 @@ namespace SalonUgi
         private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
         {
             //Nutty
-            HandForm form = new HandForm("NuttyTip");
+            HandForm form = new HandForm("NuttyTips");
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();

@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NailDraw));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.sticker_2 = new System.Windows.Forms.Button();
             this.stiker_1 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
@@ -41,12 +47,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.GoBackPnl = new System.Windows.Forms.Panel();
             this.SettingsBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,9 +71,63 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 610);
+            this.panel1.Size = new System.Drawing.Size(351, 683);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(206, 415);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "2";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(45, 415);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "2";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(190, 201);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(107, 55);
+            this.button4.TabIndex = 11;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(190, 140);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(107, 55);
+            this.button3.TabIndex = 10;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(190, 79);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(107, 55);
+            this.button2.TabIndex = 9;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(190, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 55);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // sticker_2
             // 
@@ -154,7 +208,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Location = new System.Drawing.Point(351, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(791, 610);
+            this.pictureBox1.Size = new System.Drawing.Size(791, 683);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -169,7 +223,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(351, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 610);
+            this.panel2.Size = new System.Drawing.Size(0, 683);
             this.panel2.TabIndex = 2;
             // 
             // GoBackPnl
@@ -198,71 +252,17 @@
             this.SettingsBtn.UseWaitCursor = true;
             this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(190, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 55);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(190, 79);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 55);
-            this.button2.TabIndex = 9;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(190, 140);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 55);
-            this.button3.TabIndex = 10;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Location = new System.Drawing.Point(190, 201);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 55);
-            this.button4.TabIndex = 11;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(45, 415);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "2";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(206, 415);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "2";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // NailDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1142, 610);
+            this.ClientSize = new System.Drawing.Size(1142, 683);
             this.Controls.Add(this.SettingsBtn);
             this.Controls.Add(this.GoBackPnl);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.MaximumSize = new System.Drawing.Size(1160, 730);
+            this.MinimumSize = new System.Drawing.Size(1160, 730);
             this.Name = "NailDraw";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NailDraw";

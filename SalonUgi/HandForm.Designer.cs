@@ -63,8 +63,7 @@
             this.panelMana.Size = new System.Drawing.Size(602, 623);
             this.panelMana.TabIndex = 0;
             this.panelMana.UseWaitCursor = true;
-            this.panelMana.Click += new System.EventHandler(this.panManaNutty_Click);
-            this.panelMana.Paint += new System.Windows.Forms.PaintEventHandler(this.panManaNutty_Paint);
+            this.panelMana.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMana_MouseClick);
             // 
             // GoBackPnl
             // 

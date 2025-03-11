@@ -9,40 +9,63 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace SalonUgi
 {
+    
+    
     public partial class HandForm : Form
     {
-
-        string tipDeget, tipUnghie;
+        public List<Linie>[] vectorUnghii = new List<Linie>[5];
+        ConfigurareUnghie configUnghie = new ConfigurareUnghie();
         public HandForm(string nailtype)
         {
-
+            
+            for(int i = 0; i < 5; i++)
+            {
+                vectorUnghii[i] = new List<Linie>();
+            }
             InitializeComponent();
             switch (nailtype)
             {
                 case "GraveGrippers":
                     this.panelMana.BackgroundImage = Properties.Resources.grave1;
-                    tipUnghie = "M 77.5634 128.597 C 78.4068 183.308 65.1355 201.245 44.2643 201.567 C 23.3932 201.888 2.82576 184.474 1.98237 129.762 L 0.00543739 1.16502 L 75.5646 0.0036416 L 77.5634 128.597 Z";
-                    tipDeget = "Frame12.png";
+                    configUnghie.tipUnghie = "M 77.5634 128.597 C 78.4068 183.308 65.1355 201.245 44.2643 201.567 C 23.3932 201.888 2.82576 184.474 1.98237 129.762 L 0.00543739 1.16502 L 75.5646 0.0036416 L 77.5634 128.597 Z";
+                    configUnghie.tipDeget = "Frame 12.png";
+                    configUnghie.offsetX = 385;
+                    configUnghie.offsetY = 144;
+                    configUnghie.imageX = 250;
+                    configUnghie.imageY = 50;
                     break;
                 case "BrickTips":
                     this.panelMana.BackgroundImage = Properties.Resources.bric1;
-                    //tipUnghie = "M 77.5634 128.597 C 78.4068 183.308 65.1355 201.245 44.2643 201.567 C 23.3932 201.888 2.82576 184.474 1.98237 129.762 L 0.00543739 1.16502 L 75.5646 0.0036416 L 77.5634 128.597 Z";
-                    //tipDeget = "Frame12.png";
+                    configUnghie.tipUnghie = "M 77.5634 128.597 C 78.4068 183.308 65.1355 201.245 44.2643 201.567 C 23.3932 201.888 2.82576 184.474 1.98237 129.762 L 0.00543739 1.16502 L 75.5646 0.0036416 L 77.5634 128.597 Z";
+                    configUnghie.tipDeget = "Frame 12 (1).png";
+                    configUnghie.offsetX = 385;
+                    configUnghie.offsetY = 144;
+                    configUnghie.imageX = 368;
+                    configUnghie.imageY = 138;///BUN
                     break;
                 case "CardiB":
                     this.panelMana.BackgroundImage = Properties.Resources.cardib2;
-                    //tipUnghie = "M 77.5634 128.597 C 78.4068 183.308 65.1355 201.245 44.2643 201.567 C 23.3932 201.888 2.82576 184.474 1.98237 129.762 L 0.00543739 1.16502 L 75.5646 0.0036416 L 77.5634 128.597 Z";
-                    //tipDeget = "Frame12.png";
+                    configUnghie.tipUnghie = "M 77.5634 128.597 C 78.4068 183.308 65.1355 201.245 44.2643 201.567 C 23.3932 201.888 2.82576 184.474 1.98237 129.762 L 0.00543739 1.16502 L 75.5646 0.0036416 L 77.5634 128.597 Z";
+                    configUnghie.tipDeget = "Frame 12.png";
+                    configUnghie.offsetX = 385;
+                    configUnghie.offsetY = 144;
+                    configUnghie.imageX = 260;
+                    configUnghie.imageY = 60;
                     break;
                 case "NuttyTips":
                     this.panelMana.BackgroundImage = Properties.Resources.nuti2;
-                    tipUnghie = "M 75.7038 137.28 C 74.8561 186.392 61.0367 202.071 40.1654 201.711 C 19.2942 201.351 - 0.72542 185.087 0.122322 135.974 C 0.970063 86.8621 19.2493 0.257764 40.1205 0.618247 C 60.9918 0.97873 76.5516 88.1676 75.7038 137.28 Z";
-                    tipDeget = "degettest3.png";
+                    configUnghie.tipUnghie = "M 75.7038 137.28 C 74.8561 186.392 61.0367 202.071 40.1654 201.711 C 19.2942 201.351 -0.72542 185.087 0.122322 135.974 C 0.970063 86.8621 19.2493 0.257764 40.1205 0.618247 C 60.9918 0.97873 76.5516 88.1676 75.7038 137.28 Z";
+                    configUnghie.tipDeget = "degettest3.png";
+                    configUnghie.offsetX = 385;
+                    configUnghie.offsetY = 144;
+                    configUnghie.imageX = 0;
+                    configUnghie.imageY = 0;///BUN
                     break;
             }
-
         }
 
         private void SettingsBtn_Click(object sender, EventArgs e)
@@ -65,15 +88,12 @@ namespace SalonUgi
             this.Close();
         }
 
-        private void panManaNutty_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
+        
 
-        private void panManaNutty_Click(object sender, EventArgs e)
+        private void panelMana_MouseClick(object sender, MouseEventArgs e)
         {
-            //NailDraw form = new NailDraw("degettest3.png", "M 75.7038 137.28 C 74.8561 186.392 61.0367 202.071 40.1654 201.711 C 19.2942 201.351 -0.72542 185.087 0.122322 135.974 C 0.970063 86.8621 19.2493 0.257764 40.1205 0.618247 C 60.9918 0.97873 76.5516 88.1676 75.7038 137.28 Z");
-            NailDraw form = new NailDraw(tipDeget, tipUnghie);
+            NailDraw form = new NailDraw(configUnghie, vectorUnghii[0]);
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();

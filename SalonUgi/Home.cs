@@ -15,6 +15,7 @@ namespace SalonUgi
         public Home()
         {
             InitializeComponent();
+            Muzica.wmp = this.axWindowsMediaPlayer1;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

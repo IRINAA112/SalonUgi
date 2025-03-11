@@ -57,19 +57,19 @@ namespace SalonUgi
             switch (SelectedSong)
             {
                 case "Emo":
-                    axWindowsMediaPlayer1.URL= Emo[random.Next(0, Emo.Length )];
+                    Muzica.wmp.URL= Emo[random.Next(0, Emo.Length )];
                     break;
                 case "Manele":
-                    axWindowsMediaPlayer1.URL = Manele[random.Next(0, Manele.Length)];
+                    Muzica.wmp.URL = Manele[random.Next(0, Manele.Length)];
                     break;
                 case "Patriotic":
-                    axWindowsMediaPlayer1.URL = Patriotic[random.Next(0, Patriotic.Length)];
+                    Muzica.wmp.URL = Patriotic[random.Next(0, Patriotic.Length)];
                     break;
                 case "NPC":
-                    axWindowsMediaPlayer1.URL = NPC[random.Next(0, NPC.Length)];
+                    Muzica.wmp.URL = NPC[random.Next(0, NPC.Length)];
                     break;
                 default:
-                    axWindowsMediaPlayer1.URL = "buci.wav";
+                    Muzica.wmp.URL = "buci.wav";
                     break;
             }
             player.PlayLooping();
@@ -83,7 +83,7 @@ namespace SalonUgi
             }
             else
             {
-                axWindowsMediaPlayer1.Ctlcontrols.stop();
+                Muzica.wmp.Ctlcontrols.stop();
             }
         }
 
@@ -104,7 +104,7 @@ namespace SalonUgi
 
         private void trackBar1_Scroll_1(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.settings.volume = trackBar1.Value;
+            Muzica.wmp.settings.volume = trackBar1.Value;
         }
     }
 }
