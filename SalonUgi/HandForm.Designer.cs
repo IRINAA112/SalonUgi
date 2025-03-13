@@ -75,7 +75,7 @@
             this.GoBackPnl.Size = new System.Drawing.Size(90, 77);
             this.GoBackPnl.TabIndex = 3;
             this.GoBackPnl.UseWaitCursor = true;
-            this.GoBackPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.GoBackPnl_Paint);
+           
             this.GoBackPnl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GoBackPnl_MouseClick);
             // 
             // SettingsBtn

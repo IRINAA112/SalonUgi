@@ -31,12 +31,12 @@ namespace SalonUgi
             {
                 case "GraveGrippers":
                     this.panelMana.BackgroundImage = Properties.Resources.grave1;
-                    configUnghie.tipUnghie = "M 77.5634 128.597 C 78.4068 183.308 65.1355 201.245 44.2643 201.567 C 23.3932 201.888 2.82576 184.474 1.98237 129.762 L 0.00543739 1.16502 L 75.5646 0.0036416 L 77.5634 128.597 Z";
-                    configUnghie.tipDeget = "Frame 12.png";
-                    configUnghie.offsetX = 385;
-                    configUnghie.offsetY = 144;
-                    configUnghie.imageX = 250;
-                    configUnghie.imageY = 50;
+                    configUnghie.tipUnghie = "M 75.967 123.854 C 76.8029 178.203 63.5614 196.021 42.7398 196.341 C 21.9183 196.662 1.4015 179.363 0.565583 125.014 C 0.0072909 88.715 6.62893 33.6514 17.2919 0.98428 L 55.2266 0.400826 C 66.972 32.7233 75.4087 87.5552 75.967 123.854 Z";
+                    configUnghie.tipDeget = "degettest3.png";
+                    configUnghie.offsetX = 380;
+                    configUnghie.offsetY = 148;
+                    configUnghie.imageX = 0;
+                    configUnghie.imageY = 0;
                     break;
                 case "BrickTips":
                     this.panelMana.BackgroundImage = Properties.Resources.bric1;
@@ -49,12 +49,12 @@ namespace SalonUgi
                     break;
                 case "CardiB":
                     this.panelMana.BackgroundImage = Properties.Resources.cardib2;
-                    configUnghie.tipUnghie = "M 77.5634 128.597 C 78.4068 183.308 65.1355 201.245 44.2643 201.567 C 23.3932 201.888 2.82576 184.474 1.98237 129.762 L 0.00543739 1.16502 L 75.5646 0.0036416 L 77.5634 128.597 Z";
-                    configUnghie.tipDeget = "Frame 12.png";
+                    configUnghie.tipUnghie = "M 76.0265 484.077 C 76.7682 535.056 63.535 551.771 42.7735 552.073 C 22.012 552.375 1.58414 536.15 0.842471 485.171 C 0.100801 434.192 10.3779 0.613896 31.1394 0.311847 C 51.9009 0.00979811 75.2848 433.098 76.0265 484.077 Z";
+                    configUnghie.tipDeget = "Frame 12 (1).png";
                     configUnghie.offsetX = 385;
-                    configUnghie.offsetY = 144;
-                    configUnghie.imageX = 260;
-                    configUnghie.imageY = 60;
+                    configUnghie.offsetY = 15;
+                    configUnghie.imageX = 368;
+                    configUnghie.imageY = 356;
                     break;
                 case "NuttyTips":
                     this.panelMana.BackgroundImage = Properties.Resources.nuti2;
@@ -76,10 +76,6 @@ namespace SalonUgi
             this.Hide();
         }
 
-        private void GoBackPnl_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
 
         
 
