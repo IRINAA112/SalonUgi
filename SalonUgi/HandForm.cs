@@ -117,15 +117,15 @@ namespace SalonUgi
             {
                 List<Linie> Linii = vectorUnghii[k];
 
+                g.TranslateTransform(263-60-79, 40+130-31);
                 g.ScaleTransform(0.20663f, 0.20663f);
 
-                g.Clip = SVGUtils.ConvertSvgPathToRegion(configUnghie.tipUnghie, 263-61, 40+129);
+                g.Clip = SVGUtils.ConvertSvgPathToRegion(configUnghie.tipUnghie, configUnghie.offsetX, configUnghie.offsetY);
                 g.FillRectangle(Brushes.LightCoral, 0, 0, pictureBox1.Width, pictureBox1.Height);
                 for (int i = 0; i < Linii.Count; i++)
                 {
                     for (int j = 1; j < Linii[i].points.Count; j++)
                     {
-                        //g.FillEllipse(new SolidBrush(Linii[i].culoare.Color), Linii[i].points[j].X - Linii[i].culoare.Width, Linii[i].points[j].Y - Linii[i].culoare.Width, Convert.ToInt32(1.5*Linii[i].culoare.Width), Convert.ToInt32(1.5 *Linii[i].culoare.Width));
                         g.DrawLine(Linii[i].culoare, Linii[i].points[j - 1], Linii[i].points[j]);
                     }
                 }
