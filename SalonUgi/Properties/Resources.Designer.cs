@@ -83,6 +83,26 @@ namespace SalonUgi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alb_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("alb-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap albastru_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("albastru-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bric {
             get {
                 object obj = ResourceManager.GetObject("bric", resourceCulture);
@@ -133,6 +153,16 @@ namespace SalonUgi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap galben_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("galben-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grave {
             get {
                 object obj = ResourceManager.GetObject("grave", resourceCulture);
@@ -146,6 +176,26 @@ namespace SalonUgi.Properties {
         internal static System.Drawing.Bitmap grave1 {
             get {
                 object obj = ResourceManager.GetObject("grave1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mov_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("mov-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap negru_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("negru-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +243,36 @@ namespace SalonUgi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rosu {
+            get {
+                object obj = ResourceManager.GetObject("rosu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rosu_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("rosu-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap roz_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("roz-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rozovyi_rozovyi_fon_pink_lak_dlia_nogtei_instrumenty_kisti {
             get {
                 object obj = ResourceManager.GetObject("rozovyi-rozovyi-fon-pink-lak-dlia-nogtei-instrumenty-kisti", resourceCulture);
@@ -206,6 +286,16 @@ namespace SalonUgi.Properties {
         internal static System.Drawing.Bitmap rozovyi_rozovyi_fon_pink_lak_dlia_nogtei_instrumenty_kisti1 {
             get {
                 object obj = ResourceManager.GetObject("rozovyi-rozovyi-fon-pink-lak-dlia-nogtei-instrumenty-kisti1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verde_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("verde-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

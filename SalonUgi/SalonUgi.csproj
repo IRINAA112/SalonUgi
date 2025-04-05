@@ -163,7 +163,16 @@
     <None Include="Resources\grave1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\mov-removebg-preview.png" />
+    <None Include="Resources\roz-removebg-preview.png" />
+    <None Include="Resources\negru-removebg-preview.png" />
+    <None Include="Resources\verde-removebg-preview.png" />
+    <None Include="Resources\galben-removebg-preview.png" />
+    <None Include="Resources\albastru-removebg-preview.png" />
+    <None Include="Resources\alb-removebg-preview.png" />
     <Content Include="Resources\Frame 12.png" />
+    <None Include="Resources\rosu-removebg-preview.png" />
+    <None Include="Resources\rosu.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">

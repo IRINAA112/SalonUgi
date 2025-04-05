@@ -92,7 +92,7 @@ namespace SalonUgi
         }
         private void blue_btn_Click(object sender, EventArgs e)
         {
-            this.selectedColor = Pens.Blue;
+            this.selectedColor = Pens.Aqua;
         }
 
         private void yellow_btn_Click(object sender, EventArgs e)
@@ -142,6 +142,26 @@ namespace SalonUgi
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.selectedColor = Pens.DeepPink;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.selectedColor = Pens.White;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.selectedColor = Pens.Black;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.selectedColor = Pens.BlueViolet;
         }
     }
 }
