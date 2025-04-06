@@ -6,6 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace SalonUgi
 {
@@ -19,62 +20,76 @@ namespace SalonUgi
             float firstX = 0, firstY = 0;  // First MoveTo point
             bool hasFirstPoint = false;
 
-            // Split on spaces and commas, remove empty entries
-            string[] tokens = svgPath.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
+            // Use regex to separate commands and numbers
+            var regex = new Regex(@"([MLCZmlcz])|([-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)");
+            var matches = regex.Matches(svgPath);
 
-            for (int i = 0; i < tokens.Length; i++)
+            int i = 0;
+            string currentCommand = "";
+
+            while (i < matches.Count)
             {
-                string cmd = tokens[i];
+                var token = matches[i].Value;
 
-                if (cmd == "M") // MoveTo
+                if (Regex.IsMatch(token, @"[MLCZmlcz]"))
                 {
-                    startX = float.Parse(tokens[i + 1], CultureInfo.InvariantCulture) * scale + offsetX;
-                    startY = float.Parse(tokens[i + 2], CultureInfo.InvariantCulture) * scale + offsetY;
-
-                    if (!hasFirstPoint)
-                    {
-                        firstX = startX;
-                        firstY = startY;
-                        hasFirstPoint = true;
-                    }
-
-                    i += 2; // Move past the coordinates
+                    currentCommand = token.ToUpper(); // We assume all commands are absolute (for simplicity)
+                    i++;
+                    continue;
                 }
-                else if (cmd == "L") // LineTo
-                {
-                    float x = float.Parse(tokens[i + 1], CultureInfo.InvariantCulture) * scale + offsetX;
-                    float y = float.Parse(tokens[i + 2], CultureInfo.InvariantCulture) * scale + offsetY;
 
-                    path.AddLine(startX, startY, x, y);
-                    startX = x;
-                    startY = y;
-
-                    i += 2;
-                }
-                else if (cmd == "C") // Cubic Bézier
+                switch (currentCommand)
                 {
-                    float cx1 = float.Parse(tokens[i + 1], CultureInfo.InvariantCulture) * scale + offsetX;
-                    float cy1 = float.Parse(tokens[i + 2], CultureInfo.InvariantCulture) * scale + offsetY;
-                    float cx2 = float.Parse(tokens[i + 3], CultureInfo.InvariantCulture) * scale + offsetX;
-                    float cy2 = float.Parse(tokens[i + 4], CultureInfo.InvariantCulture) * scale + offsetY;
-                    float x = float.Parse(tokens[i + 5], CultureInfo.InvariantCulture) * scale + offsetX;
-                    float y = float.Parse(tokens[i + 6], CultureInfo.InvariantCulture) * scale + offsetY;
+                    case "M":
+                        {
+                            float x = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetX;
+                            float y = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetY;
+                            startX = x;
+                            startY = y;
 
-                    path.AddBezier(startX, startY, cx1, cy1, cx2, cy2, x, y);
-                    startX = x;
-                    startY = y;
+                            if (!hasFirstPoint)
+                            {
+                                firstX = startX;
+                                firstY = startY;
+                                hasFirstPoint = true;
+                            }
 
-                    i += 6;
-                }
-                else if (cmd == "Z" || cmd == "z") // Close Path
-                {
-                    path.CloseFigure();
-                    startX = firstX;
-                    startY = firstY;
-                }
-                else
-                {
-                    throw new NotSupportedException($"Unsupported SVG command: {cmd}");
+                            // MoveTo sets the starting point but doesn't draw
+                            break;
+                        }
+                    case "L":
+                        {
+                            float x = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetX;
+                            float y = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetY;
+
+                            path.AddLine(startX, startY, x, y);
+                            startX = x;
+                            startY = y;
+                            break;
+                        }
+                    case "C":
+                        {
+                            float cx1 = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetX;
+                            float cy1 = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetY;
+                            float cx2 = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetX;
+                            float cy2 = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetY;
+                            float x = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetX;
+                            float y = float.Parse(matches[i++].Value, CultureInfo.InvariantCulture) * scale + offsetY;
+
+                            path.AddBezier(startX, startY, cx1, cy1, cx2, cy2, x, y);
+                            startX = x;
+                            startY = y;
+                            break;
+                        }
+                    case "Z":
+                        {
+                            path.CloseFigure();
+                            startX = firstX;
+                            startY = firstY;
+                            break;
+                        }
+                    default:
+                        throw new NotSupportedException($"Unsupported or missing SVG command near: {token}");
                 }
             }
 

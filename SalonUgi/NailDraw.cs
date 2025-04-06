@@ -17,13 +17,19 @@ namespace SalonUgi
     
     public partial class NailDraw : Form
     {
-        ConfigurareUnghie configU;
+        Region region;
         List<Linie> Linii;
-        public NailDraw( ConfigurareUnghie x, List<Linie>y)
+        Bitmap imagine;
+        float width;
+        float height;
+        public NailDraw( Region region, List<Linie>Linii, Bitmap imagine, float width, float height)
         {
             InitializeComponent();
-            configU = x;
-            Linii = y;
+            this.region = region;
+            this.Linii = Linii;
+            this.imagine = imagine;
+            this.width = width;
+            this.height = height;
         }
 
         Boolean desenare=new Boolean(); 
@@ -42,7 +48,7 @@ namespace SalonUgi
             desenare = true;
             this.Linii.Add(new Linie(new Pen(selectedColor.Color, this.desiredWidth)));
             var linie = this.Linii[Linii.Count - 1];
-            linie.points.Add(new Point(e.Location.X, e.Location.Y));
+            linie.points.Add(new Point(e.Location.X / 2, e.Location.Y/2));
             pictureBox1.Invalidate();
         }
 
@@ -61,7 +67,7 @@ namespace SalonUgi
             if (desenare)
             {
                 var linie=this.Linii[Linii.Count-1];
-                linie.points.Add(new Point(e.Location.X, e.Location.Y));
+                linie.points.Add(new Point(e.Location.X/2, e.Location.Y/2));
 
                 pictureBox1.Invalidate();
             }
@@ -70,10 +76,9 @@ namespace SalonUgi
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Bitmap finger = new Bitmap(configU.tipDeget);
-           
-            g.DrawImage(finger, configU.imageX, configU.imageY);
-            g.Clip=SVGUtils.ConvertSvgPathToRegion(configU.tipUnghie, configU.offsetX, configU.offsetY);
+            g.ScaleTransform(2f, 2f);
+            g.DrawImage(imagine, 0, 0, width, height);
+            g.Clip = region;
             g.FillRectangle(Brushes.LightCoral, 0, 0, pictureBox1.Width, pictureBox1.Height);
             for (int i = 0; i < Linii.Count; i++)
             {

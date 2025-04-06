@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structuri\StructuraMana.cs" />
     <Compile Include="Structuri\StructuraLinie.cs" />
     <Compile Include="Structuri\StructuraUnghie.cs" />
     <Compile Include="SVGUtils.cs" />
@@ -163,6 +164,7 @@
     <None Include="Resources\grave1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Group 5 %281%29.png" />
     <None Include="Resources\mov-removebg-preview.png" />
     <None Include="Resources\roz-removebg-preview.png" />
     <None Include="Resources\negru-removebg-preview.png" />

@@ -32,10 +32,10 @@ namespace SalonUgi
 
         SoundPlayer player=new SoundPlayer();
         string SelectedSong = "Emo";
-        string[] Emo = {"uaaaa.wav", "rammi.wav"};
-        string[] Manele = { "buci.wav" };
-        string[] NPC = { "ew.wav"};
-        string[] Patriotic = { "imn.wav" };
+        string[] Emo = {"music/uaaaa.wav", "music/rammi.wav" };
+        string[] Manele = { "music/buci.wav" };
+        string[] NPC = { "music/ew.wav" };
+        string[] Patriotic = { "music/imn.wav" };
 
         private void SoundVolTrackBar_Scroll(object sender, EventArgs e)
         {

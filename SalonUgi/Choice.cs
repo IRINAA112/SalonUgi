@@ -1,8 +1,11 @@
-﻿using System;
+﻿using SalonUgi.Properties;
+using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +15,20 @@ namespace SalonUgi
 {
     public partial class Choice : Form
     {
+        
+        List<Mana> manaList = new List<Mana>();
         public Choice()
         {
             InitializeComponent();
+            string[] hands = Directory.GetDirectories("hands");
+            for (int i = 0; i < hands.Length; i++)
+            {
+                var newMana = new Mana();
+                newMana.nume = Path.GetFileName(hands[i]);
+                newMana.imagSVG = hands[i] + "\\" + newMana.nume + ".svg";
+                newMana.imagPNG = hands[i] + "\\" + newMana.nume + ".png";
+                manaList.Add(newMana);
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -30,7 +44,7 @@ namespace SalonUgi
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
             //grave grippers
-            HandForm form = new HandForm("GraveGrippers");
+            HandForm form = new HandForm(manaList[2]);
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();
@@ -39,7 +53,7 @@ namespace SalonUgi
         private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
         {
             //Brick
-            HandForm form = new HandForm("BrickTips");
+            HandForm form = new HandForm(manaList[3]);
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();
@@ -48,7 +62,7 @@ namespace SalonUgi
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             //Cardi
-            HandForm form = new HandForm("CardiB");
+            HandForm form = new HandForm(manaList[1]);
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();
@@ -57,7 +71,7 @@ namespace SalonUgi
         private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
         {
             //Nutty
-            HandForm form = new HandForm("NuttyTips");
+            HandForm form = new HandForm(manaList[0]);
             form.FormClosed += (a, b) => { this.Show(); };
             form.Show();
             this.Hide();
