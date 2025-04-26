@@ -79,6 +79,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structuri\PlacedSticker.cs" />
+    <Compile Include="Structuri\Sticker.cs" />
     <Compile Include="Structuri\StructuraMana.cs" />
     <Compile Include="Structuri\StructuraLinie.cs" />
     <Compile Include="Structuri\StructuraUnghie.cs" />
