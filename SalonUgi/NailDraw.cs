@@ -25,13 +25,16 @@ namespace SalonUgi
         float height;
         float scale, offsetX, offsetY;
         string selectedSticker = "";
-        List<PlacedSticker> placedStickers = new List<PlacedSticker>();
+        List<PlacedSticker> placedStickers ;
         List<Sticker> stickerList = new List<Sticker>();
-        public NailDraw( Region region, List<Linie>Linii, Bitmap imagine, float width, float height)
+
+       
+        public NailDraw( Region region, NailData naildata, Bitmap imagine, float width, float height)
         {
             InitializeComponent();
             this.region = region;
-            this.Linii = Linii;
+            this.Linii = naildata.linii;
+            this.placedStickers = naildata.placedStickers;
             this.imagine = imagine;
             this.width = width;
             this.height = height;
@@ -46,7 +49,7 @@ namespace SalonUgi
             
         }
 
-        Boolean desenare=new Boolean(); 
+        Boolean desenare=false; 
 
         
         Pen selectedColor = Pens.Black;
@@ -122,7 +125,6 @@ namespace SalonUgi
             {
                 for (int j = 1; j < Linii[i].points.Count; j++)
                 {
-                    //g.FillEllipse(new SolidBrush(Linii[i].culoare.Color), Linii[i].points[j].X - Linii[i].culoare.Width, Linii[i].points[j].Y - Linii[i].culoare.Width, Convert.ToInt32(1.5*Linii[i].culoare.Width), Convert.ToInt32(1.5 *Linii[i].culoare.Width));
                     g.DrawLine(Linii[i].culoare, Linii[i].points[j - 1], Linii[i].points[j]);
                 }
             }

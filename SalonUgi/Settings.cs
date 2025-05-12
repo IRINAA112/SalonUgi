@@ -30,7 +30,7 @@ namespace SalonUgi
             this.Close();
         }
 
-        SoundPlayer player=new SoundPlayer();
+        
         string SelectedSong = "Emo";
         string[] Emo = {"music/uaaaa.wav", "music/rammi.wav" };
         string[] Manele = { "music/buci.wav" };
@@ -72,7 +72,6 @@ namespace SalonUgi
                     Muzica.wmp.URL = "buci.wav";
                     break;
             }
-            player.PlayLooping();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
