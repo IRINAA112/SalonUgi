@@ -33,6 +33,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GoBackPnl = new System.Windows.Forms.Panel();
             this.SettingsBtn = new System.Windows.Forms.Button();
+            this.savebtn = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelProsop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +48,7 @@
             this.panelProsop.BackColor = System.Drawing.Color.Transparent;
             this.panelProsop.BackgroundImage = global::SalonUgi.Properties.Resources.prosop_removebg_preview;
             this.panelProsop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelProsop.Controls.Add(this.panel1);
             this.panelProsop.Controls.Add(this.pictureBox1);
             this.panelProsop.Location = new System.Drawing.Point(540, 0);
             this.panelProsop.Name = "panelProsop";
@@ -91,6 +95,31 @@
             this.SettingsBtn.UseWaitCursor = true;
             this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
             // 
+            // savebtn
+            // 
+            this.savebtn.BackColor = System.Drawing.Color.Pink;
+            this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savebtn.Font = new System.Drawing.Font("Monotype Corsiva", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savebtn.Location = new System.Drawing.Point(41, 222);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(70, 31);
+            this.savebtn.TabIndex = 1;
+            this.savebtn.Text = "Save";
+            this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.UseWaitCursor = true;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::SalonUgi.Properties.Resources.finis_removebg_preview;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(422, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(153, 102);
+            this.panel1.TabIndex = 2;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // HandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -99,6 +128,7 @@
             this.BackgroundImage = global::SalonUgi.Properties.Resources.rozovyi_rozovyi_fon_pink_lak_dlia_nogtei_instrumenty_kisti;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1142, 683);
+            this.Controls.Add(this.savebtn);
             this.Controls.Add(this.SettingsBtn);
             this.Controls.Add(this.GoBackPnl);
             this.Controls.Add(this.panelProsop);
@@ -120,5 +150,8 @@
         private System.Windows.Forms.Panel GoBackPnl;
         private System.Windows.Forms.Button SettingsBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button savebtn;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

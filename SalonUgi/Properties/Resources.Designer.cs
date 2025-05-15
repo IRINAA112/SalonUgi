@@ -153,6 +153,16 @@ namespace SalonUgi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap finis_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("finis-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap galben_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("galben-removebg-preview", resourceCulture);
@@ -186,6 +196,16 @@ namespace SalonUgi.Properties {
         internal static System.Drawing.Bitmap Group_5__1_ {
             get {
                 object obj = ResourceManager.GetObject("Group 5 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("image-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

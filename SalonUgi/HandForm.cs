@@ -148,5 +148,33 @@ namespace SalonUgi
                 }
             }
         }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+            this.saveFileDialog1.ShowDialog();
+            Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.DrawToBitmap(bmp, new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
+
+            bmp.Save(this.saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            Home form = new Home();
+            form.FormClosed += (a, b) => { this.Show(); };
+            form.Show();
+            this.Hide();
+        }
     }
+    
 }

@@ -213,6 +213,11 @@ namespace SalonUgi
             this.selectedColor = Pens.White;
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.selectedColor = Pens.LightPink;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.selectedColor = Pens.Black;

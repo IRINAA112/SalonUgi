@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NailDraw));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.SettingsBtn = new System.Windows.Forms.Button();
+            this.GoBackPnl = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.Larina = new System.Windows.Forms.Button();
             this.Irisa = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -38,14 +43,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Pisica = new System.Windows.Forms.Button();
             this.Shrek = new System.Windows.Forms.Button();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.green_btn = new System.Windows.Forms.Button();
             this.yellow_btn = new System.Windows.Forms.Button();
             this.blue_btn = new System.Windows.Forms.Button();
             this.red_btn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.SettingsBtn = new System.Windows.Forms.Button();
-            this.GoBackPnl = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -59,6 +60,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.Larina);
             this.panel1.Controls.Add(this.Irisa);
             this.panel1.Controls.Add(this.button4);
@@ -78,11 +80,72 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.BackColor = System.Drawing.Color.Purple;
+            this.trackBar1.LargeChange = 1;
+            this.trackBar1.Location = new System.Drawing.Point(13, 542);
+            this.trackBar1.Maximum = 15;
+            this.trackBar1.Minimum = 1;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(320, 56);
+            this.trackBar1.TabIndex = 5;
+            this.trackBar1.Value = 5;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1142, 713);
+            this.panel2.TabIndex = 2;
+            // 
+            // SettingsBtn
+            // 
+            this.SettingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SettingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.SettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.BackgroundImage")));
+            this.SettingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SettingsBtn.Location = new System.Drawing.Point(387, 125);
+            this.SettingsBtn.Name = "SettingsBtn";
+            this.SettingsBtn.Size = new System.Drawing.Size(77, 70);
+            this.SettingsBtn.TabIndex = 5;
+            this.SettingsBtn.UseVisualStyleBackColor = false;
+            this.SettingsBtn.UseWaitCursor = true;
+            this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
+            // 
+            // GoBackPnl
+            // 
+            this.GoBackPnl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GoBackPnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.GoBackPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GoBackPnl.BackgroundImage")));
+            this.GoBackPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GoBackPnl.Location = new System.Drawing.Point(372, 18);
+            this.GoBackPnl.Name = "GoBackPnl";
+            this.GoBackPnl.Size = new System.Drawing.Size(107, 91);
+            this.GoBackPnl.TabIndex = 3;
+            this.GoBackPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.GoBackPnl_Paint);
+            this.GoBackPnl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GoBackPnl_MouseClick);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::SalonUgi.Properties.Resources.image_removebg_preview;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(236, 294);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(72, 167);
+            this.button5.TabIndex = 14;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Larina
             // 
             this.Larina.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Larina.BackgroundImage")));
             this.Larina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Larina.Location = new System.Drawing.Point(206, 392);
+            this.Larina.Location = new System.Drawing.Point(140, 392);
             this.Larina.Name = "Larina";
             this.Larina.Size = new System.Drawing.Size(75, 69);
             this.Larina.TabIndex = 13;
@@ -161,7 +224,7 @@
             // 
             this.Pisica.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Pisica.BackgroundImage")));
             this.Pisica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pisica.Location = new System.Drawing.Point(206, 294);
+            this.Pisica.Location = new System.Drawing.Point(140, 294);
             this.Pisica.Name = "Pisica";
             this.Pisica.Size = new System.Drawing.Size(75, 69);
             this.Pisica.TabIndex = 7;
@@ -178,19 +241,6 @@
             this.Shrek.TabIndex = 6;
             this.Shrek.UseVisualStyleBackColor = true;
             this.Shrek.Click += new System.EventHandler(this.stiker_1_Click);
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.BackColor = System.Drawing.Color.Purple;
-            this.trackBar1.LargeChange = 1;
-            this.trackBar1.Location = new System.Drawing.Point(13, 542);
-            this.trackBar1.Maximum = 15;
-            this.trackBar1.Minimum = 1;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(320, 56);
-            this.trackBar1.TabIndex = 5;
-            this.trackBar1.Value = 5;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // green_btn
             // 
@@ -248,42 +298,6 @@
             this.red_btn.TabIndex = 0;
             this.red_btn.UseVisualStyleBackColor = false;
             this.red_btn.Click += new System.EventHandler(this.red_btn_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1142, 713);
-            this.panel2.TabIndex = 2;
-            // 
-            // SettingsBtn
-            // 
-            this.SettingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SettingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.SettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.BackgroundImage")));
-            this.SettingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SettingsBtn.Location = new System.Drawing.Point(387, 125);
-            this.SettingsBtn.Name = "SettingsBtn";
-            this.SettingsBtn.Size = new System.Drawing.Size(77, 70);
-            this.SettingsBtn.TabIndex = 5;
-            this.SettingsBtn.UseVisualStyleBackColor = false;
-            this.SettingsBtn.UseWaitCursor = true;
-            this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
-            // 
-            // GoBackPnl
-            // 
-            this.GoBackPnl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GoBackPnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.GoBackPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GoBackPnl.BackgroundImage")));
-            this.GoBackPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.GoBackPnl.Location = new System.Drawing.Point(372, 18);
-            this.GoBackPnl.Name = "GoBackPnl";
-            this.GoBackPnl.Size = new System.Drawing.Size(107, 91);
-            this.GoBackPnl.TabIndex = 3;
-            this.GoBackPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.GoBackPnl_Paint);
-            this.GoBackPnl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GoBackPnl_MouseClick);
             // 
             // pictureBox1
             // 
@@ -344,5 +358,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
     }
 }

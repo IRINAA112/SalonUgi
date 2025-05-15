@@ -175,6 +175,8 @@
     <None Include="Resources\galben-removebg-preview.png" />
     <None Include="Resources\albastru-removebg-preview.png" />
     <None Include="Resources\alb-removebg-preview.png" />
+    <None Include="bin\Debug\finis-removebg-preview.png" />
+    <None Include="bin\Debug\image-removebg-preview.png" />
     <Content Include="Resources\Frame 12.png" />
     <None Include="Resources\rosu-removebg-preview.png" />
     <None Include="Resources\rosu.png" />
